@@ -33,5 +33,5 @@ function trp_enqueue_scripts_styles() {
 	//wp_enqueue_style( 'trp-fa', get_stylesheet_directory_uri().'/lib/fa/css/font-awesome.min.css', array(), null );
 	wp_enqueue_style( 'trp-app', get_stylesheet_directory_uri().'/css/bk.css', array(), null );
 
-	wp_dequeue_style('bk-trp');
+	wp_dequeue_style('techreviewpro');
 }
