@@ -1140,14 +1140,34 @@ p.entry-meta {
 	float: left;
 }
 .home-left section:first-child article {
+	position: relative;
 	width: 48%;
 	float: left;
 	margin: 1%;
+}
+.home-left section:first-child a.aligncenter {
+	margin-bottom: 0px;
+}
+.home-left section:first-child header {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+}
+.home-left section:first-child .entry-title a {
+	line-height: 1.2;
+	padding: 5px;
+	color: #fff;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
 }
 .home-left section:nth-child(2) article {
 	float: left;
 	width: 31%;
 	margin: 1%;
+}
+.home-left section:nth-child(2) h2 {
+	font-size: 16px;
 }
 .home-right {
 	width: 340px;
