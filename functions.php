@@ -9,7 +9,7 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 add_theme_support( 'genesis-menus', array( 'primary' => 'Primary Menu' ) );
 add_theme_support( 'genesis-footer-widgets', 4 );
 add_theme_support( 'genesis-connect-woocommerce' );
-add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
@@ -35,3 +35,8 @@ function trp_enqueue_scripts_styles() {
 
 	wp_dequeue_style('techreviewpro');
 }
+
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+
+add_action('genesis_header','genesis_do_nav');
