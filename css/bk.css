@@ -1360,9 +1360,9 @@ p.entry-meta {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	.home-left,
-	.home-right,
-	.home-main {
+	.home-left .wrap,
+	.home-right .wrap,
+	.home-main .wrap {
 		padding: 0px;
 	}
 	.site-inner {
