@@ -12,6 +12,7 @@ add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
 add_image_size('home-top','300','200', true);
+add_image_size('home-main','630','9999');
 
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
@@ -30,7 +31,7 @@ function trp_enqueue_scripts_styles() {
 
 	wp_enqueue_script( 'trp-custom', get_stylesheet_directory_uri().'/js/bk.js', array( 'jquery' ), null , true );
 
-	wp_enqueue_style( 'trp-font', "//fonts.googleapis.com/css?family=Roboto:400,700", array(), null );
+	wp_enqueue_style( 'trp-font', "//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700", array(), null );
 
 	//wp_enqueue_style( 'trp-fa', get_stylesheet_directory_uri().'/lib/fa/css/font-awesome.min.css', array(), null );
 	wp_enqueue_style( 'trp-app', get_stylesheet_directory_uri().'/css/bk.css', array(), null );
@@ -53,4 +54,16 @@ genesis_register_sidebar( array(
 	'id'          => 'home-right',
 	'name'        => __( 'Home Right','trp' ),
 	'description' => __( 'This is the home page right section.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'home-newsletter',
+	'name'        => __( 'Home Newsletter','trp' ),
+	'description' => __( 'Below home top section.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'home-main',
+	'name'        => __( 'Home Main','trp' ),
+	'description' => __( 'Home Main section.','trp' ),
 ) );
