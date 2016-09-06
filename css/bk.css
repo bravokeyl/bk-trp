@@ -1239,6 +1239,25 @@ p.entry-meta {
 	margin: 1rem 0 3rem 0;
 	padding: 30px 0px 20px 0px;
 }
+
+/* Responsive Menu */
+.responsive-menu-icon {
+    cursor: pointer;
+    display: none;
+    padding: 10px 0;
+    padding: 1rem 0;
+}
+.responsive-menu-icon::before {
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+		content: "\f333";
+		font: normal 24px/1 'dashicons';
+    margin: 0 auto;
+    speak: none;
+    text-align: center;
+    text-transform: none;
+}
+
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
@@ -1266,9 +1285,11 @@ p.entry-meta {
 		width: 360px;
 	}
 
-	.sidebar-primary,
-	.title-area {
+	.sidebar-primary {
 		width: 300px;
+	}
+	.title-area {
+		width: 260px;
 	}
 
 }
@@ -1289,13 +1310,12 @@ p.entry-meta {
 	.sidebar-secondary,
 	.sidebar-sidebar-content .content,
 	.sidebar-sidebar-content .content-sidebar-wrap,
-	.site-header .widget-area,
-	.title-area {
+	.site-header .widget-area {
 		width: 100%;
 	}
 
 	.site-header .wrap {
-		padding: 20px 5%;
+		padding: 0;
 	}
 
 	.header-image .site-title > a {
@@ -1310,9 +1330,7 @@ p.entry-meta {
 
 	.genesis-nav-menu,
 	.site-description,
-	.site-header .title-area,
-	.site-header .search-form,
-	.site-title {
+	.site-header .search-form {
 		text-align: center;
 	}
 
@@ -1325,7 +1343,19 @@ p.entry-meta {
 	.site-header .search-form {
 		margin: 16px auto;
 	}
-
+	.home-top {
+		width: 100%;
+	}
+	.home-left,
+	.home-right {
+		width: 100%;
+		max-width: 100%;
+	}
+	.home-left section:first-child article,
+	.home-left section:nth-child(2) article {
+		width: 100%;
+		margin: 0px;
+	}
 }
 
 @media only screen and (max-width: 880px) {
@@ -1335,9 +1365,34 @@ p.entry-meta {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
-
+	.site-inner {
+		padding-top: 10px;
+	}
+	.responsive-menu-icon {
+	    display: block;
+	    text-align: right !important;
+	    padding: 10px 10px 0;
+	    padding: 0.5rem 1rem 0;
+	}
+	.site-header .genesis-nav-menu {
+		display: none;
+	}
+	header.site-header {
+    position: static;
+    height: auto;
+	}
+	.title-area {
+		padding: 10px 10px;
+	}
+	.nav-primary {
+		float: none;
+		padding: 10px 0px;
+		height: auto;
+	}
+	.nav-primary .menu-item {
+		display: block;
+	}
 }
-
 
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
