@@ -1357,8 +1357,8 @@ p.entry-meta {
 
 	.site-inner,
 	.wrap {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.home-left,
 	.home-right,
