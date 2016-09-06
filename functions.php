@@ -7,7 +7,7 @@ define('CHILD_THEME_VERSION','1.0.0');
 add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 add_theme_support( 'genesis-menus', array( 'primary' => 'Primary Menu' ) );
-add_theme_support( 'genesis-footer-widgets', 4 );
+add_theme_support( 'genesis-footer-widgets', 3 );
 add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
