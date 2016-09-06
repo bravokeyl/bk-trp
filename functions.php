@@ -45,6 +45,12 @@ remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action('genesis_header','genesis_do_nav');
 
 genesis_register_sidebar( array(
+	'id'          => 'below-header',
+	'name'        => __( 'Below Header','trp' ),
+	'description' => __( 'This is for the ad below hedaer.','trp' ),
+) );
+
+genesis_register_sidebar( array(
 	'id'          => 'home-left',
 	'name'        => __( 'Home Left','trp' ),
 	'description' => __( 'This is the home page left section.','trp' ),
@@ -77,4 +83,12 @@ function trp_footer() {
 	$output .= ' &middot; All Rights Reserved';
 	$output .= '</p>';
 	echo $output;
+}
+
+add_action('genesis_after_header','trp_ad_below_header');
+function trp_ad_below_header() {
+	genesis_widget_area( 'below-header', array(
+		'before' => '<div id="below-header" class="below-header"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
 }

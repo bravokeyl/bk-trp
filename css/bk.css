@@ -446,7 +446,7 @@ th {
 
 .site-inner {
 	clear: both;
-	padding-top: 84px;
+	padding-top: 10px;
 }
 
 /* ## Column Widths and Positions
@@ -1186,7 +1186,10 @@ p.entry-meta {
     margin-bottom: 2rem;
     word-wrap: break-word
 }
-
+/* Below Header */
+.below-header {
+	padding-top: 84px;
+}
 /* Home Top */
 .bk-home-top {
 	clear: both;
@@ -1370,7 +1373,8 @@ p.entry-meta {
 	.home-main .wrap {
 		padding: 0px;
 	}
-	.site-inner {
+	.site-inner,
+	.below-header {
 		padding-top: 10px;
 	}
 	.responsive-menu-icon {
