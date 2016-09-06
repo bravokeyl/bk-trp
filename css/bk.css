@@ -150,7 +150,9 @@ em,
 i {
 	font-style: italic;
 }
-
+pre {
+	overflow: auto;
+}
 blockquote {
 	margin: 40px;
 }
@@ -1125,7 +1127,32 @@ p.entry-meta {
 	margin-bottom: 0;
 }
 
-
+/* Home Top */
+.bk-home-top {
+	clear: both;
+	overflow: hidden;
+}
+.bk-home-top .widget-title {
+	display: none;
+}
+.home-left {
+	width: 640px;
+	float: left;
+}
+.home-left section:first-child article {
+	width: 48%;
+	float: left;
+	margin: 1%;
+}
+.home-left section:nth-child(2) article {
+	float: left;
+	width: 31%;
+	margin: 1%;
+}
+.home-right {
+	width: 340px;
+	float: right;
+}
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 

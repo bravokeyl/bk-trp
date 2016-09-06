@@ -11,6 +11,8 @@ add_theme_support( 'genesis-footer-widgets', 4 );
 add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
+add_image_size('home-top','300','200', true);
+
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
 
@@ -40,3 +42,15 @@ remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 
 add_action('genesis_header','genesis_do_nav');
+
+genesis_register_sidebar( array(
+	'id'          => 'home-left',
+	'name'        => __( 'Home Left','trp' ),
+	'description' => __( 'This is the home page left section.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'home-right',
+	'name'        => __( 'Home Right','trp' ),
+	'description' => __( 'This is the home page right section.','trp' ),
+) );
