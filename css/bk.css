@@ -1351,11 +1351,6 @@ p.entry-meta {
 		width: 100%;
 		max-width: 100%;
 	}
-	.home-left section:first-child article,
-	.home-left section:nth-child(2) article {
-		width: 100%;
-		margin: 0px;
-	}
 }
 
 @media only screen and (max-width: 880px) {
@@ -1391,6 +1386,16 @@ p.entry-meta {
 	}
 	.nav-primary .menu-item {
 		display: block;
+	}
+}
+@media only screen and (max-width: 760px) {
+	.footer-widgets-3 {
+		float: none;
+	}
+	.home-left section:first-child article,
+	.home-left section:nth-child(2) article {
+		width: 100%;
+		margin: 0px;
 	}
 }
 
