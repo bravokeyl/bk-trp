@@ -1241,7 +1241,10 @@ p.entry-meta {
 	margin: 1rem 0 3rem 0;
 	padding: 30px 0px 20px 0px;
 }
-
+.home-main .featured-content .entry,
+.sidebar .featured-content .entry {
+    border-bottom: 2px solid #eee;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
