@@ -1116,13 +1116,17 @@ p.entry-meta {
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	border-top: 1px solid #ddd;
-	font-size: 16px;
-	font-size: 1.6rem;
+	background-color: #222;
+	font-size: 14px;
+  font-size: 1.4rem;
+  text-align: center;
 	line-height: 1;
-	padding: 40px 0;
+	padding: 15px 0;
 }
-
+.site-footer,
+.site-footer a {
+	color: #aaa;
+}
 .site-footer p {
 	margin-bottom: 0;
 }

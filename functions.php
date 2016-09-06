@@ -67,3 +67,14 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Home Main','trp' ),
 	'description' => __( 'Home Main section.','trp' ),
 ) );
+
+remove_action('genesis_footer','genesis_do_footer');
+add_action('genesis_footer','trp_footer');
+function trp_footer() {
+	$output  = '<p>';
+	$output  = '<p>Copyright &copy; '.date( 'Y' ).' &middot;';
+	$output .= ' <a href="'.esc_url(home_url()).'">'.get_bloginfo('name').'</a>';
+	$output .= ' &middot; All Rights Reserved';
+	$output .= '</p>';
+	echo $output;
+}
