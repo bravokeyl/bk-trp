@@ -87,8 +87,13 @@ function trp_footer() {
 
 add_action('genesis_after_header','trp_ad_below_header');
 function trp_ad_below_header() {
-	genesis_widget_area( 'below-header', array(
-		'before' => '<div id="below-header" class="below-header"><div class="wrap">',
-		'after'  => '</div></div>',
-	) );
+	if(is_active_sidebar('below-header')) {
+		genesis_widget_area( 'below-header', array(
+			'before' => '<div id="below-header" class="below-header"><div class="wrap">',
+			'after'  => '</div></div>',
+		) );
+	}
+	else {?>
+		<div id="below-header" class="below-header"></div>
+	<?php }
 }
