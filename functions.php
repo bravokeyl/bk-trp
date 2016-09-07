@@ -198,16 +198,17 @@ add_filter( 'the_content', 'trp_insert_post_ads' );
 
 function trp_insert_post_ads( $content ) {
 
-	$ad_code = trp_get_dynamic_sidebar('trp-ad-3');
+	$ad3 = trp_get_dynamic_sidebar('trp-ad-3');
+	$ad4 = trp_get_dynamic_sidebar('trp-ad-4');
 
 	if ( is_single() && ! is_admin() ) {
-		return trp_insert_after_paragraph( $ad_code, 2, $content );
+		return trp_insert_after_paragraph( $ad3, $ad4, $content );
 	}
 
 	return $content;
 }
 
-function trp_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+function trp_insert_after_paragraph( $ad3, $ad4, $content ) {
 	$closing_p = '</p>';
 	$paragraphs = explode( $closing_p, $content );
 	foreach ($paragraphs as $index => $paragraph) {
@@ -215,9 +216,11 @@ function trp_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 		if ( trim( $paragraph ) ) {
 			$paragraphs[$index] .= $closing_p;
 		}
-
-		if ( $paragraph_id == $index + 1 ) {
-			$paragraphs[$index] .= $insertion;
+		if ( 2 == $index + 1 ) {
+			$paragraphs[$index] .= $ad3;
+		}
+		if ( 5 == $index + 1 ) {
+			$paragraphs[$index] .= $ad4;
 		}
 	}
 
