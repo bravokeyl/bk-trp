@@ -1550,6 +1550,9 @@ main.content {
 		font-size: 1 rem;
 		font-size: 16px;
 	}
+	img.centered, .aligncenter {
+    margin-bottom: 0px;
+	}
 	p {
 		overflow: hidden;
 	}
