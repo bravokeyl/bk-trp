@@ -1308,11 +1308,11 @@ p.entry-meta {
 .home-deals a.button {
 	text-align: center;
 	color: #fff;
-	background: #00B478;
+	background: #2E7AD1;
 }
 .home-deals a.button:hover,
 .home-deals a.button:focus{
-	background: #c3251d;
+	background: #00B478;
 }
 .display-posts-listing {
 	padding: 20px;
