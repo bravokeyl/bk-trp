@@ -1560,7 +1560,8 @@ main.content {
 	p {
 		overflow: hidden;
 	}
-	.content .entry-content {
+	.home .content .entry-content,
+	.archive .content .entry-content {
 		display: none;
 	}
 }
