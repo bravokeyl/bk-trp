@@ -114,3 +114,11 @@ function trp_post_title() {
 		echo '<h1>'.get_the_title().'</h1>';
 	}
 }
+
+add_post_type_support( 'trp_deals', 'genesis-layouts' );
+function trp_cpt_layout() {
+    if( 'trp_deals' == get_post_type() ) {
+        return 'full-width-content';
+    }
+}
+add_filter( 'genesis_site_layout', 'trp_cpt_layout' );
