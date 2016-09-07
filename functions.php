@@ -243,3 +243,5 @@ function trp_do_author_ad() {
 		'after'  => '</div>',
 	) );
 }
+
+add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
