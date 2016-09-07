@@ -1286,12 +1286,15 @@ p.entry-meta {
 .home-deals a {
 	color: #222;
 }
-.home-deals button a {
+.home-deals button a,
+.home-deals button {
 	color: #fff;
 	background: #00B478;
 }
 .home-deals button a:hover,
-.home-deals button a:focus {
+.home-deals button a:focus,
+.home-deals button:hover,
+.home-deals button:focus {
 	background: #c3251d;
 }
 .display-posts-listing {
