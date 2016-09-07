@@ -1313,6 +1313,9 @@ p.entry-meta {
 	clear: both;
 	overflow: hidden;
 }
+main.content {
+	margin-bottom: 40px;
+}
 .home-main,
 main.content {
 	padding: 30px;
@@ -1321,6 +1324,7 @@ main.content {
 .home main.content {
 	padding: 0px;
 	border: none;
+	margin-bottom: 0px;
 }
 .sidebar-primary {
 	padding: 20px;
