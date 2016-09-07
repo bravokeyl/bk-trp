@@ -106,6 +106,12 @@ genesis_register_sidebar( array(
 	'description' => __( 'Ad four [trp-ad id="4"].','trp' ),
 ) );
 
+genesis_register_sidebar( array(
+	'id'          => 'trp-ad-beau',
+	'name'        => __( 'Ad: Below Author','trp' ),
+	'description' => __( 'Ad below author box.','trp' ),
+) );
+
 remove_action('genesis_footer','genesis_do_footer');
 add_action('genesis_footer','trp_footer');
 function trp_footer() {
@@ -165,7 +171,7 @@ function trp_below_title_ad() {
 
 add_action('genesis_entry_footer','trp_post_end_ad',20);
 function trp_post_end_ad() {
-	if(!is_home() && !is_archive()) {
+	if(is_single()) {
 		genesis_widget_area( 'trp-pead', array(
 			'before' => '<div id="trp-pead" class="trp-pead">',
 			'after'  => '</div>',
@@ -225,4 +231,15 @@ function trp_insert_after_paragraph( $ad3, $ad4, $content ) {
 	}
 
 	return implode( '', $paragraphs );
+}
+
+add_action( 'genesis_after_entry', 'trp_do_author_ad', 9 );
+function trp_do_author_ad() {
+	if ( ! is_single() || ! post_type_supports( get_post_type(), 'author' ) )
+		return;
+
+	genesis_widget_area( 'trp-ad-beau', array(
+		'before' => '<div id="trp-ad-beau" class="trp-ad-beau">',
+		'after'  => '</div>',
+	) );
 }
