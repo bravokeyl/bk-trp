@@ -18,7 +18,6 @@ add_image_size('home-top','300','200', true);
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
 
-
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
