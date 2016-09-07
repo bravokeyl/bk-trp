@@ -1546,6 +1546,9 @@ main.content {
 		border-radius: 50%;
 		margin: 0 10px 10px 0;
 	}
+	p {
+		overflow: hidden;
+	}
 }
 
 /* # Print Styles
