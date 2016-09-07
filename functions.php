@@ -247,14 +247,31 @@ add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 
-add_action( 'genesis_entry_header', 'trp_post_image_open', 2 );
-add_action( 'genesis_entry_header', 'genesis_do_post_image', 3 );
-add_action( 'genesis_entry_header', 'trp_post_image_close', 4 );
+add_action( 'genesis_entry_header', 'trp_post_image', 3 );
 
-function trp_post_image_open() {
+function trp_post_image() {
 	echo '<div class="trp-entry-image">';
-}
+	if ( ! is_singular() && genesis_get_option( 'content_archive_thumbnail' ) ) {
 
-function trp_post_image_close() {
-	echo '<\div>';
+		$img = genesis_get_image( array(
+			'format'  => 'html',
+			'size'    => genesis_get_option( 'image_size' ),
+			'context' => 'archive',
+			'attr'    => genesis_parse_attr( 'entry-image', array ( 'alt' => get_the_title() ) ),
+		) );
+
+		if ( ! empty( $img ) ) {
+
+			genesis_markup( array(
+ 				'html5'   => '<a %s>',
+ 				'xhtml'   => '<a href="' . get_permalink() . '" class="entry-image-link" aria-hidden="true">',
+ 				'context' => 'entry-image-link'
+ 			));
+
+  			echo $img . '</a>';
+
+ 		}
+
+	}
+	echo '</div>';
 }
