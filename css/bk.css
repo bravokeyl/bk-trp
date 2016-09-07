@@ -1371,8 +1371,8 @@ main.content {
 	display: none;
 }
 .entry-header{
-	clear: both;
-	overflow: hidden;
+	/*clear: both;
+	overflow: hidden;*/
 }
 .trp-entry-image {
 	display: none;
@@ -1560,7 +1560,8 @@ main.content {
 		height: auto;
 		margin: 0 10px 10px 0;
 	}
-	.featured-content .entry-title {
+	.home .entry-title,
+	.archive .entry-title {
 		font-size: 1rem;
 		font-size: 16px;
 	}
