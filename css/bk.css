@@ -1273,9 +1273,13 @@ p.entry-meta {
     border-bottom: 2px solid #eee;
 }
 .home-deals {
-    padding: 20px 0px;
 		clear: both;
 		overflow: hidden;
+		border: 1px solid #e1e1e1;
+}
+.home-deals .widget-title {
+	padding: 20px;
+	border-bottom: 1px solid #e1e1e1;
 }
 .home-deals article,
 .home-deals .listing-item {
@@ -1296,6 +1300,7 @@ p.entry-meta {
 	background: #c3251d;
 }
 .display-posts-listing {
+	padding: 20px;
 	clear: both;
 	overflow: hidden;
 }
