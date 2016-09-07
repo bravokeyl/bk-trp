@@ -1316,6 +1316,10 @@ main.content {
 	padding: 30px;
 	border: 1px solid #e1e1e1;
 }
+.sidebar-primary {
+	padding: 20px;
+	border: 1px solid #e1e1e1;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
