@@ -1539,6 +1539,13 @@ main.content {
 		color: #222;
     text-shadow: none;
 	}
+	.home .entry-image,
+	.archive .entry-image {
+		max-width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		margin: 0 10px 10px 0;
+	}
 }
 
 /* # Print Styles
