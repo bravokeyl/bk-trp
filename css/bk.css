@@ -1272,10 +1272,14 @@ p.entry-meta {
 .sidebar .featured-content .entry {
     border-bottom: 2px solid #eee;
 }
-.home-deals article {
+.home-deals article,
+.home-deals .listing-item {
 	width: 31%;
 	margin: 1%;
 	float: left;
+}
+.home-deals a {
+	color: #222;
 }
 /* Responsive Menu */
 .responsive-menu-icon {
@@ -1437,7 +1441,8 @@ p.entry-meta {
 	}
 	.home-left section:first-child article,
 	.home-left section:nth-child(2) article,
-	.home-deals article {
+	.home-deals article,
+	.home-deals .listing-item {
 		width: 100%;
 		margin: 0px;
 	}
