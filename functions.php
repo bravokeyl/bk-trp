@@ -219,7 +219,7 @@ function trp_insert_after_paragraph( $ad3, $ad4, $content ) {
 		if ( 2 == $index + 1 ) {
 			$paragraphs[$index] .= $ad3;
 		}
-		if ( 5 == $index + 1 ) {
+		if ( 6 == $index + 1 ) {
 			$paragraphs[$index] .= $ad4;
 		}
 	}

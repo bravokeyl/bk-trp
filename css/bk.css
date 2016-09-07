@@ -979,11 +979,6 @@ img.alignright,
   background: #00B478 -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.16) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom');
   background: #00B478 -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.16));
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
 }
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
