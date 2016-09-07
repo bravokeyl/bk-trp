@@ -1272,6 +1272,10 @@ p.entry-meta {
 .sidebar .featured-content .entry {
     border-bottom: 2px solid #eee;
 }
+.home-main .featured-content .entry:last-child,
+.sidebar .featured-content .entry:last-child {
+	border: none;
+}
 .home-deals {
 		clear: both;
 		overflow: hidden;
