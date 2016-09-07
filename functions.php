@@ -14,7 +14,7 @@ add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
 add_image_size('home-top','300','200', true);
-add_image_size('home-main','630','9999');
+//add_image_size('home-main','630','9999');
 
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
@@ -74,6 +74,12 @@ genesis_register_sidebar( array(
 	'id'          => 'home-main',
 	'name'        => __( 'Home Main','trp' ),
 	'description' => __( 'Home Main section.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'home-deals',
+	'name'        => __( 'Home Deals','trp' ),
+	'description' => __( 'Home Deals section.','trp' ),
 ) );
 
 remove_action('genesis_footer','genesis_do_footer');

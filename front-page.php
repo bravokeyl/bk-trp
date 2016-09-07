@@ -27,4 +27,11 @@ function trp_do_loop() {
 	) );
 }
 
+add_action('genesis_after_loop','trp_after_loop');
+function trp_after_loop() {
+  genesis_widget_area( 'home-deals', array(
+		'before' => '<div id="home-deals" class="home-deals"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+}
 genesis();

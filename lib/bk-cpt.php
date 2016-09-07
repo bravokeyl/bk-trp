@@ -34,7 +34,6 @@ function trp_deals_post_type() {
 		'description'           => __( 'Deals and Discounts', 'trp' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
-		'taxonomies'            => array( 'category' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
