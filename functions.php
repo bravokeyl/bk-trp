@@ -143,16 +143,20 @@ function trp_read_more() {
 
 add_action('genesis_entry_header','trp_below_title_ad',14);
 function trp_below_title_ad() {
-	genesis_widget_area( 'trp-btad', array(
-		'before' => '<div id="trp-btad" class="trp-btad">',
-		'after'  => '</div>',
-	) );
+	if(!is_home() && !is_archive()) {
+		genesis_widget_area( 'trp-btad', array(
+			'before' => '<div id="trp-btad" class="trp-btad">',
+			'after'  => '</div>',
+		) );
+	}
 }
 
 add_action('genesis_entry_footer','trp_post_end_ad',20);
 function trp_post_end_ad() {
-	genesis_widget_area( 'trp-pead', array(
-		'before' => '<div id="trp-pead" class="trp-pead">',
-		'after'  => '</div>',
-	) );
+	if(!is_home() && !is_archive()) {
+		genesis_widget_area( 'trp-pead', array(
+			'before' => '<div id="trp-pead" class="trp-pead">',
+			'after'  => '</div>',
+		) );
+	}
 }
