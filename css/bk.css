@@ -1539,6 +1539,10 @@ main.content {
 		color: #222;
     text-shadow: none;
 	}
+	.entry-title {
+	    font-size: 20px;
+	    font-size: 2rem;
+	}
 	.home .entry-image,
 	.archive .entry-image {
 		float: left;
@@ -1547,7 +1551,7 @@ main.content {
 		margin: 0 10px 10px 0;
 	}
 	.featured-content .entry-title {
-		font-size: 1 rem;
+		font-size: 1rem;
 		font-size: 16px;
 	}
 	img.centered, .aligncenter {
@@ -1555,6 +1559,9 @@ main.content {
 	}
 	p {
 		overflow: hidden;
+	}
+	.content .entry-content {
+		display: none;
 	}
 }
 
