@@ -1361,6 +1361,9 @@ main.content {
 .trp-pead {
 	padding-top: 10px;
 }
+.archive .entry-footer {
+	display: none;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;

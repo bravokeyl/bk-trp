@@ -97,7 +97,7 @@ genesis_register_sidebar( array(
 genesis_register_sidebar( array(
 	'id'          => 'trp-ad-3',
 	'name'        => __( 'Ad: Three','trp' ),
-	'description' => __( 'Ad three [trp-ad id="3".','trp' ),
+	'description' => __( 'Ad three using [trp-ad id="3" or After Second para Ad','trp' ),
 ) );
 
 genesis_register_sidebar( array(
