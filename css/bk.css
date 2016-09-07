@@ -972,7 +972,7 @@ img.alignright,
 .nav-primary .sub-menu a {
 	background: #2E7AD1;
 }
-.highlight a {
+.site-header .highlight a {
 	color: #fff;
 	background: #00B478;
   background: #00B478 -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.16) 100%);
