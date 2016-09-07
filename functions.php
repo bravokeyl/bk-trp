@@ -94,6 +94,18 @@ genesis_register_sidebar( array(
 	'description' => __( 'Ad which is at the end of the post.','trp' ),
 ) );
 
+genesis_register_sidebar( array(
+	'id'          => 'trp-ad-3',
+	'name'        => __( 'Ad: Three','trp' ),
+	'description' => __( 'Ad three [trp-ad id="3".','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'trp-ad-4',
+	'name'        => __( 'Ad: Four','trp' ),
+	'description' => __( 'Ad four [trp-ad id="4"].','trp' ),
+) );
+
 remove_action('genesis_footer','genesis_do_footer');
 add_action('genesis_footer','trp_footer');
 function trp_footer() {
@@ -159,4 +171,25 @@ function trp_post_end_ad() {
 			'after'  => '</div>',
 		) );
 	}
+}
+
+
+function trp_get_dynamic_sidebar($index = 1) {
+	$sidebar_contents = "";
+	ob_start();
+	if ( is_active_sidebar( $index ) ){
+		dynamic_sidebar($index);
+	}
+	$sidebar_contents = ob_get_clean();
+	return $sidebar_contents;
+}
+
+add_shortcode('trp-ad','trp_ad');
+function trp_ad($atts) {
+	$id = 0;
+	if(!empty($atts['id'])){
+		$id = $atts['id'];
+	}
+	$index = 'trp-ad-'.$id;
+	return trp_get_dynamic_sidebar($index);
 }
