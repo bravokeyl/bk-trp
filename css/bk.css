@@ -1281,6 +1281,7 @@ p.entry-meta {
 		overflow: hidden;
 		border: 1px solid #e1e1e1;
 		margin-bottom: 40px;
+		margin-top: 20px;
 }
 .home-deals .widget-title {
 	padding: 20px;
@@ -1312,9 +1313,14 @@ p.entry-meta {
 	clear: both;
 	overflow: hidden;
 }
+.home-main,
 main.content {
 	padding: 30px;
 	border: 1px solid #e1e1e1;
+}
+.home main.content {
+	padding: 0px;
+	border: none;
 }
 .sidebar-primary {
 	padding: 20px;
