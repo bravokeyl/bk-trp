@@ -126,5 +126,5 @@ add_filter( 'genesis_site_layout', 'trp_cpt_layout' );
 add_filter('excerpt_more','trp_read_more');
 
 function trp_read_more() {
-	return '<div class="trp-read-more"><span>Click to Continue</span></div>';
+	return '<div class="trp-read-more"><a href='.esc_url(get_permalink()).'>Click to Continue</a></div>';
 }

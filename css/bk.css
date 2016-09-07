@@ -1343,10 +1343,16 @@ main.content {
 	overflow: hidden;
 	margin-bottom: 30px;
 }
-.trp-read-more span {
+.trp-read-more a {
 	background: #2E7AD1;
 	color: #fff;
-	padding: 10px 20px;
+	padding: 8px 15px;
+	border-radius: 2px;
+	display: inline-block;
+}
+.trp-read-more a:hover,
+.trp-read-more a:focus {
+	background: #00B478;
 }
 /* Responsive Menu */
 .responsive-menu-icon {
