@@ -1168,7 +1168,8 @@ p.entry-meta {
     font-size: 14px;
     font-size: 1.7rem;
     padding: 60px 0 20px;
-    padding: 6rem 0 2rem
+    padding: 6rem 0 2rem;
+    border-top: 10px solid #2E7AD1;
 }
 
 .footer-widgets-1,
