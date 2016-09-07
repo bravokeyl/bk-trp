@@ -246,4 +246,15 @@ add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
-add_action( 'genesis_entry_header', 'genesis_do_post_image', 4 );
+
+add_action( 'genesis_entry_header', 'trp_post_image_open', 2 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 3 );
+add_action( 'genesis_entry_header', 'trp_post_image_close', 4 );
+
+function trp_post_image_open() {
+	echo '<div class="trp-entry-image">';
+}
+
+function trp_post_image_close() {
+	echo '<\div>';
+}
