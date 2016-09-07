@@ -246,4 +246,4 @@ add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
-add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 4 );

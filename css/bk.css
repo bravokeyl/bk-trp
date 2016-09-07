@@ -1370,6 +1370,10 @@ main.content {
 .entry-comments-link {
 	display: none;
 }
+.entry-header{
+	clear: both;
+	overflow: hidden;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
