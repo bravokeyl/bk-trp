@@ -2,6 +2,7 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 include_once( get_stylesheet_directory() . '/lib/bk-cpt.php' );
+include_once( get_stylesheet_directory() . '/lib/fpw.php' );
 
 define('CHILD_THEME_NAME','TechReviewPro');
 define('CHILD_THEME_VERSION','1.0.0');
@@ -122,3 +123,9 @@ function trp_cpt_layout() {
     }
 }
 add_filter( 'genesis_site_layout', 'trp_cpt_layout' );
+
+add_action( 'widgets_init', 'custom_featured_post_widget', 15 );
+function custom_featured_post_widget() {
+	//unregister_widget( 'Genesis_Featured_Post' );
+	register_widget( 'Custom_Featured_Post' );
+}

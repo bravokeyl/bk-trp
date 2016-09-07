@@ -34,4 +34,6 @@ function trp_after_loop() {
 		'after'  => '</div></div>',
 	) );
 }
+
+remove_action( 'genesis_entry_header', 'genesis_do_post_format_image', 4 );
 genesis();

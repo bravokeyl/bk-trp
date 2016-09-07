@@ -1274,6 +1274,8 @@ p.entry-meta {
 }
 .home-deals {
     padding: 20px 0px;
+		clear: both;
+		overflow: hidden;
 }
 .home-deals article,
 .home-deals .listing-item {
@@ -1283,6 +1285,10 @@ p.entry-meta {
 }
 .home-deals a {
 	color: #222;
+}
+.display-posts-listing {
+	clear: both;
+	overflow: hidden;
 }
 /* Responsive Menu */
 .responsive-menu-icon {
