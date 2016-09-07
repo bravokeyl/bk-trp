@@ -1338,6 +1338,16 @@ main.content {
 	padding: 20px;
 	border: 1px solid #e1e1e1;
 }
+.trp-read-more {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.trp-read-more span {
+	background: #2E7AD1;
+	color: #fff;
+	padding: 10px 20px;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
