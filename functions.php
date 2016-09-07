@@ -48,7 +48,7 @@ add_action('genesis_header','genesis_do_nav');
 
 genesis_register_sidebar( array(
 	'id'          => 'below-header',
-	'name'        => __( 'Below Header','trp' ),
+	'name'        => __( 'Ad: Below Header','trp' ),
 	'description' => __( 'This is for the ad below hedaer.','trp' ),
 ) );
 
@@ -80,6 +80,18 @@ genesis_register_sidebar( array(
 	'id'          => 'home-deals',
 	'name'        => __( 'Home Deals','trp' ),
 	'description' => __( 'Home Deals section.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'trp-btad',
+	'name'        => __( 'Ad: Below Title','trp' ),
+	'description' => __( 'Ad which is below title and before content.','trp' ),
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'trp-pead',
+	'name'        => __( 'Ad: Post End','trp' ),
+	'description' => __( 'Ad which is at the end of the post.','trp' ),
 ) );
 
 remove_action('genesis_footer','genesis_do_footer');
@@ -127,4 +139,20 @@ add_filter('excerpt_more','trp_read_more');
 
 function trp_read_more() {
 	return '<div class="trp-read-more"><a href='.esc_url(get_permalink()).'>Click to Continue</a></div>';
+}
+
+add_action('genesis_entry_header','trp_below_title_ad',14);
+function trp_below_title_ad() {
+	genesis_widget_area( 'trp-btad', array(
+		'before' => '<div id="trp-btad" class="trp-btad">',
+		'after'  => '</div>',
+	) );
+}
+
+add_action('genesis_entry_footer','trp_post_end_ad',20);
+function trp_post_end_ad() {
+	genesis_widget_area( 'trp-pead', array(
+		'before' => '<div id="trp-pead" class="trp-pead">',
+		'after'  => '</div>',
+	) );
 }

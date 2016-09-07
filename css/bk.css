@@ -1358,6 +1358,9 @@ main.content {
 .trp-read-more a:focus {
 	background: #00B478;
 }
+.trp-pead {
+	padding-top: 10px;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
