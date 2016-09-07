@@ -6,7 +6,7 @@ include_once( get_stylesheet_directory() . '/lib/bk-cpt.php' );
 define('CHILD_THEME_NAME','TechReviewPro');
 define('CHILD_THEME_VERSION','1.0.0');
 
-//add_theme_support( 'genesis-responsive-viewport' );
+add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 add_theme_support( 'genesis-menus', array( 'primary' => 'Primary Menu' ) );
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -14,7 +14,6 @@ add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
 add_image_size('home-top','300','200', true);
-//add_image_size('home-main','630','9999');
 
 unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
@@ -245,8 +244,3 @@ function trp_do_author_ad() {
 }
 
 add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
-
-add_action( 'genesis_meta', 'trp_viewport_meta_tag' );
-function trp_viewport_meta_tag() {
- echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">';
-}
