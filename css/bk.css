@@ -1359,6 +1359,13 @@ main.content {
 .archive .entry-footer {
 	display: none;
 }
+.author-box {
+	padding: 30px;
+	border: 1px solid #e1e1e1;
+}
+.avatar {
+	border-radius: 50%;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
