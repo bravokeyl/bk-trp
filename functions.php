@@ -201,7 +201,7 @@ function trp_insert_post_ads( $content ) {
 	$ad_code = trp_get_dynamic_sidebar('trp-ad-3');
 
 	if ( is_single() && ! is_admin() ) {
-		return trp_insert_after_paragraph( $ad_code, 1, $content );
+		return trp_insert_after_paragraph( $ad_code, 2, $content );
 	}
 
 	return $content;
