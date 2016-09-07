@@ -1081,6 +1081,8 @@ p.entry-meta {
 .entry-comments,
 .entry-pings {
 	margin-bottom: 60px;
+	padding: 30px;
+	border: 1px solid #e1e1e1;
 }
 
 .comment-header {
