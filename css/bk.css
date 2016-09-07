@@ -1288,6 +1288,7 @@ p.entry-meta {
 }
 .home-deals button a,
 .home-deals button {
+	text-align: center;
 	color: #fff;
 	background: #00B478;
 }
