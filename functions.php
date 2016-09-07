@@ -97,3 +97,12 @@ function trp_ad_below_header() {
 		<div id="below-header" class="below-header"></div>
 	<?php }
 }
+remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+add_action('genesis_before_content','genesis_do_breadcrumbs');
+add_action('genesis_before_content','trp_post_title');
+function trp_post_title() {
+	if(is_single()) {
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+		echo '<h1>'.get_the_title().'</h1>';
+	}
+}
