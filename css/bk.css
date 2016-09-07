@@ -1272,6 +1272,9 @@ p.entry-meta {
 .sidebar .featured-content .entry {
     border-bottom: 2px solid #eee;
 }
+.home-deals {
+    padding: 20px 0px;
+}
 .home-deals article,
 .home-deals .listing-item {
 	width: 31%;
