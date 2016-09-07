@@ -193,3 +193,34 @@ function trp_ad($atts) {
 	$index = 'trp-ad-'.$id;
 	return trp_get_dynamic_sidebar($index);
 }
+
+
+add_filter( 'the_content', 'trp_insert_post_ads' );
+
+function trp_insert_post_ads( $content ) {
+
+	$ad_code = '<div>Ads code goes here</div>';
+
+	if ( is_single() && ! is_admin() ) {
+		return trp_insert_after_paragraph( $ad_code, 1, $content );
+	}
+
+	return $content;
+}
+
+function trp_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+	$closing_p = '</p>';
+	$paragraphs = explode( $closing_p, $content );
+	foreach ($paragraphs as $index => $paragraph) {
+
+		if ( trim( $paragraph ) ) {
+			$paragraphs[$index] .= $closing_p;
+		}
+
+		if ( $paragraph_id == $index + 1 ) {
+			$paragraphs[$index] .= $insertion;
+		}
+	}
+
+	return implode( '', $paragraphs );
+}
