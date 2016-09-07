@@ -1484,8 +1484,8 @@ main.content {
 
 	.site-inner,
 	.wrap {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 	.home-left .wrap,
 	.home-right .wrap,
@@ -1531,6 +1531,13 @@ main.content {
 	.home-deals .listing-item {
 		width: 100%;
 		margin: 0px;
+	}
+	.home-left section:first-child header {
+		position: static;
+	}
+	.home-left section:first-child .entry-title a {
+		color: #222;
+    text-shadow: none;
 	}
 }
 
