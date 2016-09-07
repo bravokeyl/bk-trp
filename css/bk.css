@@ -1367,6 +1367,9 @@ main.content {
 .avatar {
 	border-radius: 50%;
 }
+.entry-comments-link {
+	display: none;
+}
 /* Responsive Menu */
 .responsive-menu-icon {
     cursor: pointer;
