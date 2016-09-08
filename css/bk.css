@@ -294,10 +294,10 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	color: #333;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 400;
-	padding: 16px;
+	padding: 10px;
 	width: 100%;
 }
 
@@ -334,7 +334,7 @@ input[type="submit"],
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 700;
-	padding: 16px 24px;
+	padding: 10px 24px;
 	width: auto;
 }
 
@@ -1394,7 +1394,55 @@ main.content {
     text-align: center;
     text-transform: none;
 }
-
+.search-icon {
+	position: absolute;
+	z-index: 9999;
+	right: 50px;
+	padding-top: 8px;
+	display: none;
+}
+.search-icon:before {
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+		content: "\f179";
+    font: normal 24px/1 'dashicons';
+    margin: 0 auto;
+    speak: none;
+    text-align: center;
+    text-transform: none;
+}
+.search-form input[type="search"]{
+	float: left;
+	width: 80%;
+	width: -webkit-calc( 100% - 50px);
+	width: -moz-calc( 100% - 50px);
+	width: calc( 100% - 50px);
+}
+.search-form input[type="submit"]{
+	float: left;
+	width: 50px;
+	height: 48px;
+	padding: 0px;
+	text-indent: -9999px;
+	background: #2E7AD1 url('search.png') no-repeat center;
+  background-size: contain;
+}
+.search-form:after {
+	/*-webkit-font-smoothing: antialiased;
+	color: #fff;
+	content: "\f179";
+	font: normal 24px/1 'dashicons';
+	margin: 0 auto;
+	speak: none;
+	text-align: center;
+	text-transform: none;
+	position: absolute;
+	z-index: 9999;
+	right: 0px;
+  width: 50px;
+  height: 48px;
+  padding: 10px;*/
+}
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
@@ -1511,6 +1559,10 @@ main.content {
 	    text-align: right !important;
 	    padding: 10px 10px 0;
 	    padding: 0.5rem 1rem 0;
+	}
+	.search-icon {
+	    display: block;
+	    text-align: right !important;
 	}
 	.site-header .genesis-nav-menu {
 		display: none;

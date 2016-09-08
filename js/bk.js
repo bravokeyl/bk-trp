@@ -1,9 +1,11 @@
 jQuery(function( $ ){
-
+	$("header .genesis-nav-menu").before('<div class="search-icon"></div>');
 	$("header .genesis-nav-menu").addClass("responsive-menu").before('<div class="responsive-menu-icon"></div>');
-
 	$(".responsive-menu-icon").click(function(){
 		$(this).next("header .genesis-nav-menu").slideToggle();
+	});
+	$(".search-icon").click(function(){
+		$(".site-header").next('.search-form').slideToggle();
 	});
 
 	$(window).resize(function(){

@@ -275,3 +275,8 @@ function trp_post_image() {
 	}
 	echo '</div>';
 }
+
+add_action('genesis_header','trp_search',30);
+function trp_search() {
+	echo get_search_form();
+}
