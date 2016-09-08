@@ -1411,7 +1411,7 @@ main.content {
     text-align: center;
     text-transform: none;
 }
-.search-form input[type="search"]{
+.site-header + .search-form input[type="search"]{
 	float: left;
 	width: 80%;
 	width: -webkit-calc( 100% - 50px);
@@ -1427,7 +1427,7 @@ main.content {
 	background: #2E7AD1 url('search.png') no-repeat center;
   background-size: contain;
 }
-.search-form {
+.site-header + .search-form {
 	display: none;
 }
 /* # Media Queries
