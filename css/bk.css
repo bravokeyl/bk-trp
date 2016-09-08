@@ -1427,21 +1427,8 @@ main.content {
 	background: #2E7AD1 url('search.png') no-repeat center;
   background-size: contain;
 }
-.search-form:after {
-	/*-webkit-font-smoothing: antialiased;
-	color: #fff;
-	content: "\f179";
-	font: normal 24px/1 'dashicons';
-	margin: 0 auto;
-	speak: none;
-	text-align: center;
-	text-transform: none;
-	position: absolute;
-	z-index: 9999;
-	right: 0px;
-  width: 50px;
-  height: 48px;
-  padding: 10px;*/
+.search-form {
+	display: none;
 }
 /* # Media Queries
 ---------------------------------------------------------------------------------------------------- */
