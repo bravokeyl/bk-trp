@@ -1593,14 +1593,16 @@ main.content {
 	    font-size: 2rem;
 	}
 	.home .entry-image,
-	.archive .entry-image {
+	.archive .entry-image,
+	.search .entry-image {
 		float: left;
 		max-width: 80px;
 		height: auto;
 		margin: 0 10px 10px 0;
 	}
 	.home .entry-title,
-	.archive .entry-title {
+	.archive .entry-title,
+	.search .entry-title {
 		font-size: 1rem;
 		font-size: 16px;
 	}
