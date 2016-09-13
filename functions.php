@@ -39,7 +39,7 @@ function trp_enqueue_scripts_styles() {
 	wp_dequeue_style('techreviewpro');
 }
 
-remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+//remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 
 add_action('genesis_header','genesis_do_nav');

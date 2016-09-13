@@ -960,6 +960,7 @@ img.alignright,
 }
 
 .nav-primary a:hover,
+.nav-primary .sub-menu a:hover,
 .nav-primary .current-menu-item a {
     color: #f0f0f0;
     background: #333333;
