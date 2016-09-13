@@ -783,25 +783,22 @@ img.alignright,
 .site-header {
 	width: 100%;
 	margin: 0 auto;
-	position: fixed;
-	height: 64px;
-	background: #2E7AD1;
-  background: #2E7AD1 -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.16) 100%);
+	background: #52b068;
 	color: #fff;
-	z-index: 9999;
 }
 
 .site-header .wrap {
 	padding: 0px 0;
+	max-width: 100%;
 }
 
 /* ## Title Area
 --------------------------------------------- */
 
 .title-area {
-	float: left;
+	text-align: center;
 	padding: 10px 0;
-	width: 360px;
+	width: 100%;
 }
 
 .site-title {
@@ -953,32 +950,26 @@ img.alignright,
 /* ## Primary and Secondary Navigation
 --------------------------------------------- */
 .nav-primary {
-	float: right;
-	height: 64px;
+	background: #4a4a4a;
 }
-.nav-primary a,
-.nav-primary a:hover,
-.nav-primary .current-menu-item a {
-    color: #fff;
+.nav-primary .wrap {
+	max-width: 1000px;
+}
+.nav-primary a {
+    color: #ededed;
 }
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item a {
-    color: #fff;
-    background: #074E9F;
-    background: #074E9F -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.16) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom');
-    background: #074E9F -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.16));
+    color: #f0f0f0;
+    background: #333333;
 }
 .nav-primary .sub-menu a {
-	background: #2E7AD1;
+	background: #4a4a4a;
 }
 .site-header .highlight a {
-	color: #fff;
-	background: #00B478;
-  background: #00B478 -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.16) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$top', endColorstr='$bottom');
-  background: #00B478 -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.16));
+	/*color: #fff;
+	background: #00B478;*/
 }
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
